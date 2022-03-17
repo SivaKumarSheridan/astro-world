@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js"
+    "script": "npm run dev"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.23",
