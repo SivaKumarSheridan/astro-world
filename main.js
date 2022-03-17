@@ -122,7 +122,7 @@ const sound = new THREE.Audio(listener);
 scene.add(sound);
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load("sounds/lemmings.mp3", function (buffer) {
+audioLoader.load("https://astro-world.s3.amazonaws.com/sounds/lemmings.mp3", function (buffer) {
   sound.setBuffer(buffer);
   sound.setLoop(true);
   sound.setVolume(0.1);
@@ -144,13 +144,13 @@ function elf() {
 //TEXTURE
 const textureLoader = new THREE.TextureLoader();
 
-const normalTexture = textureLoader.load("textures/NormalMap.png");
+const normalTexture = textureLoader.load("https://astro-world.s3.amazonaws.com/textures/NormalMap.png");
 
 const loader = new GLTFLoader();
 let obj;
 let modelObj = [];
 loader.load(
-  "elf/scene.gltf",
+  "https://astro-world.s3.amazonaws.com/elf/scene.gltf",
   function (gltf) {
     gltf.scene.userData = { name: "elf" };
     let elfobj;
@@ -168,7 +168,7 @@ loader.load(
   }
 );
 loader.load(
-  "banana/scene.gltf",
+  "https://astro-world.s3.amazonaws.com/banana/scene.gltf",
   function (gltf) {
     gltf.scene.userData = { id: "banana" };
     obj = gltf.scene;
@@ -185,7 +185,7 @@ loader.load(
   }
 );
 loader.load(
-  "shiba/scene.gltf",
+  "https://astro-world.s3.amazonaws.com/shiba/scene.gltf",
   function (gltf) {
     gltf.scene.userData = { id: "dog" };
     let obj = gltf.scene;
@@ -349,7 +349,7 @@ function playHoverSound() {
   scene.add(sound);
   // load a sound and set it as the Audio object's buffer
   const audioLoader = new THREE.AudioLoader();
-  audioLoader.load("sounds/lemmings.mp3", function (buffer) {
+  audioLoader.load("https://astro-world.s3.amazonaws.com/sounds/lemmings.mp3", function (buffer) {
     sound.setBuffer(buffer);
     sound.setVolume(0.05);
     sound.play(); //.play()
@@ -388,21 +388,21 @@ addEventListener("mouseup", (event) => {
       console.log(objectName);
       if (objectName.includes("polySurface")) {
      
-        audioLoader.load("sounds/dog_bark.mp3", function (buffer) {
+        audioLoader.load("https://astro-world.s3.amazonaws.com/sounds/dog_bark.mp3", function (buffer) {
           dogsound.setBuffer(buffer);
           dogsound.setLoop(false);
           dogsound.setVolume(1);
           dogsound.play();
         });
       } else if (objectName.includes("mushroom")) {
-        audioLoader.load("sounds/fairy.mp3", function (buffer) {
+        audioLoader.load("https://astro-world.s3.amazonaws.com/sounds/fairy.mp3", function (buffer) {
           fairySound.setBuffer(buffer);
           fairySound.setLoop(false);
           fairySound.setVolume(1);
           fairySound.play();
         });
       } else if (objectName.includes("Banana")) {
-        audioLoader.load("sounds/banana.mp3", function (buffer) {
+        audioLoader.load("https://astro-world.s3.amazonaws.com/sounds/banana.mp3", function (buffer) {
           bananasound.setBuffer(buffer);
           bananasound.setLoop(false);
           bananasound.setVolume(1);
