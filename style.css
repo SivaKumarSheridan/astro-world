@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+canvas {
+  display: block;
+}
+/* Using Utility-Classes, like Tailwind CSS */
+/* Take HTML out of document flow, allows HTML overlay the 3js background */
+.absolute {
+  position: absolute;
+}
+
+.text-white {
+  color: white;
+  mix-blend-mode: exclusion;
+}
+
+#app {
+  /* centers in middle of screen */
+  top: 30%;
+  transform: translate(-50%, 50%);
+  left: 50%;
+}
+.font-exo {
+  font-family: "Exo", sans-serif;
+}
+
+.font-space-mono {
+  font-family: "Space Mono", monospace;
+}
