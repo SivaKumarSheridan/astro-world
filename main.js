@@ -150,7 +150,7 @@ const loader = new GLTFLoader();
 let obj;
 let modelObj = [];
 loader.load(
-  "assets/scene.gltf",
+  "elf/scene.gltf",
   function (gltf) {
     gltf.scene.userData = { name: "elf" };
     let elfobj;
